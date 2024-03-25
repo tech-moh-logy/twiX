@@ -1,3 +1,17 @@
+# Developed by Mohammed (TIGER) @ tech-moh-logy (GitHub)
+# TwiXpert is not your average Twitter bot. Leveraging cutting-edge technologies such as OpenAI, NLTK's sentiment analysis, SentimentIntensityAnalyzer, and TextBlob, TwiXpert stands out as a powerful virtual assistant capable of providing personalized and real-time responses.
+
+# MOHAMMED | Copyright © 2024. All Rights Reserved.
+    
+# Key Features:
+# + Personalized Responses: TwiXpert uses sophisticated AI algorithms to craft responses tailored to each interaction, mimicking human-like conversation.
+# + Real-Time Interaction: TwiXpert engages with users in real-time, ensuring timely and relevant communication.
+# + Sentiment Analysis: With NLTK's sentiment analysis and SentimentIntensityAnalyzer, TwiXpert gauges the sentiment of conversations, allowing for empathetic and contextually appropriate replies.
+# + Content Curation: TwiXpert goes beyond mere conversation, actively liking and interacting with posts that align with its personality and interests.
+# + Community Engagement: TwiXpert values its followers and reciprocates by following back and engaging with those who connect with it.
+
+# ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 import tweepy
 import time
 from textblob import TextBlob
@@ -29,6 +43,9 @@ openai.api_key = OPENAI_API_KEY
 
 # Dictionary to store conversation history
 conversation_history = {}
+
+# ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# Developed by Mohammed (TIGER) @ tech-moh-logy (GitHub)
 
 # Initialize sentiment analysis
 # def analyze_sentiment(text):
@@ -88,6 +105,9 @@ def analyze_emotion(text):
 # sentiment_label, emotions = analyze_sentiment(text)
 # print("Sentiment Label:", sentiment_label)
 # print("Emotions:", emotions)
+# Developed by Mohammed (TIGER) @ tech-moh-logy (GitHub)
+
+# ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 # Function to respond to mentions with NLU
 def respond_to_mentions():
@@ -116,12 +136,16 @@ def respond_to_mentions():
             api.update_status(response_message, in_reply_to_status_id=mention.id)
             print("Started new conversation.")
 
+# ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 # Function to follow back followers
 def follow_followers():
     for follower in tweepy.Cursor(api.followers).items():
         if not follower.following:
             follower.follow()
             print("Followed back:", follower.screen_name)
+
+# ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 # Function to like tweets containing a specific keyword
 def like_tweets():
@@ -131,6 +155,8 @@ def like_tweets():
         api.create_favorite(tweet.id)
         print("Liked tweet:", tweet.text)
 
+# ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 # Function to retweet tweets containing a specific keyword
 def retweet_tweets():
     keyword = "Data Science"
@@ -139,12 +165,16 @@ def retweet_tweets():
         api.retweet(tweet.id)
         print("Retweeted:", tweet.text)
 
+# ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 # Function to curate and share interesting content
 def share_interesting_content():
     # Example: Share latest articles on Python programming
     articles = ["https://example.com/article1", "https://example.com/article2"]
     for article in articles:
         tweet("Check out this interesting article: " + article)
+
+# ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 # Function to analyze user interactions and track analytics
 def analyze_user_interactions():
@@ -154,6 +184,8 @@ def analyze_user_interactions():
         # Analyze user interactions and store analytics data
         pass
 
+# ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 # Function to recommend content based on user interests
 def recommend_content(user_id):
     # Example: Recommend content based on user interests
@@ -161,7 +193,8 @@ def recommend_content(user_id):
     recommended_content = random.choice(interests)
     return recommended_content
 
-# ------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 def post_scheduled():
     # Check recent mentions
     mentions = api.mentions_timeline(count=5)
@@ -198,3 +231,8 @@ def generate_response(topic, mention_text):
         max_tokens=100
     )
     return response.choices[0].text.strip()
+
+# Developed by Mohammed (TIGER) @ tech-moh-logy (GitHub)
+# TwiXpert is not your average Twitter bot. Leveraging cutting-edge technologies such as OpenAI, NLTK's sentiment analysis, SentimentIntensityAnalyzer, and TextBlob, TwiXpert stands out as a powerful virtual assistant capable of providing personalized and real-time responses.
+
+# MOHAMMED | Copyright © 2024. All Rights Reserved.
