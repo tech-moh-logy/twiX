@@ -2,6 +2,8 @@
 
 TwiXpert is not your average Twitter bot. Leveraging cutting-edge technologies such as OpenAI, NLTK's sentiment analysis, SentimentIntensityAnalyzer, and TextBlob, TwiXpert stands out as a powerful virtual assistant capable of providing personalized and real-time responses.
 
+![TwiXpert](https://github.com/tech-moh-logy/twiX/assets/132733865/5822708a-d43f-4d40-96a5-24c1f526a65a)
+
 ## Key Features:
 
 - **Personalized Responses**: TwiXpert uses sophisticated AI algorithms to craft responses tailored to each interaction, mimicking human-like conversation.
