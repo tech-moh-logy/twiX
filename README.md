@@ -1,3 +1,21 @@
+##### Credits
+###### This project was developed and deployed by MOHAMMED.
+
+<sub>
+  <b>Copyright © 2024 Mohammed (TIGER). All rights reserved.</b>
+</sub>
+
+  <br>
+  
+##### MOHAMMED's License
+<sub> 
+  Unauthorized copying, redistribution, forking, or cloning of the content from this repository and other associated materials is strictly prohibited and will not be tolerated.
+</sub>
+
+###### Learn more about [MOHAMMED's License](https://github.com/tech-moh-logy/MOHAMMED-License/blob/main/README.md) here.
+
+  <hr>
+
 # TwiXpert: Your Advanced Twitter Companion
 
 TwiXpert is not your average Twitter bot. Leveraging cutting-edge technologies such as OpenAI, NLTK's sentiment analysis, SentimentIntensityAnalyzer, and TextBlob, TwiXpert stands out as a powerful virtual assistant capable of providing personalized and real-time responses.
